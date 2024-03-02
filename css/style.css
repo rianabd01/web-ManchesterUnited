@@ -1,0 +1,226 @@
+html {
+  font-family: "Source Sans 3", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #eaeaea;
+}
+* {
+  box-sizing: border-box;
+}
+/* ---------------------------HEADER STYLE--------------------- */
+
+header {
+  display: inline;
+}
+
+.ggmutron {
+  /* text-align: center; */
+  background: crimson;
+  /* margin: 0; */
+  padding: 10px 100px;
+  display: flex;
+  justify-content: space-between;
+  /* height: 150px; */
+}
+
+.ggmutron div {
+  display: flex;
+}
+.ggmutron img {
+  /* margin: auto 0; */
+  /* margin-left: 100px; */
+  margin-right: 20px;
+  width: 70px;
+  height: 70px;
+}
+.ggmutron p {
+  margin: auto 0;
+  line-height: 80%;
+  font-size: 30px;
+  font-weight: 900;
+  color: white;
+  text-align: left;
+}
+
+nav {
+  z-index: 1;
+  background-color: #333;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  box-shadow: 0px 1px 5px black;
+}
+
+nav ul {
+  text-transform: uppercase;
+  /* margin: 0; */
+  /* padding: 20px; */
+  /* overflow: hidden; */
+  display: flex;
+  gap: 1rem;
+  /* margin: 0 auto; */
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  font-weight: 900;
+  text-decoration: none;
+  color: white;
+}
+
+/* -----------------------GENERAL STYLE----------------- */
+
+main {
+  padding: 25px;
+  display: flex;
+  gap: 4rem;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+img + figcaption {
+  text-transform: uppercase;
+  font-size: 1em;
+  text-align: center;
+  padding-top: 10px;
+  font-weight: 900;
+  line-height: 1rem;
+}
+
+/* --------------------CONTENT------------------- */
+
+.content {
+  order: 1;
+  flex: 3;
+}
+
+/* CONTENT DESCRIPTION */
+#description section {
+  display: flex;
+  flex-direction: column;
+}
+
+#description table {
+  margin: auto;
+  margin-top: 20px;
+  text-align: left;
+  /* gap: 1rem; */
+  /* justify-content: center; */
+}
+
+table td {
+  padding-left: 50px;
+}
+
+#description .club-logo {
+  width: 200px;
+  height: max-content;
+  margin: 0 auto;
+  transition: 0.5s;
+}
+
+#description .club-logo:hover {
+  transform: translateY(-15px);
+}
+
+/* CONTENT TROPHIES */
+#trophies section {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-container:hover {
+  /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.356); */
+  transform: scale(1.2);
+  transition-delay: 0.2s;
+}
+
+.card-container:hover > img {
+  transform: scale(1.1);
+}
+
+.card-container {
+  width: 250px;
+  padding: 20px;
+  /* background-color: white; */
+  transition: 0.2s;
+  /* border: 3px solid black; */
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-container > img {
+  transition: 0.5s;
+  height: 150px;
+  width: max-content;
+  margin: 0 auto;
+}
+.card-container p {
+  text-align: center;
+}
+
+#players {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* ASIDE */
+aside {
+  order: 0;
+  flex: 1;
+}
+
+aside > img {
+  width: 300px;
+  /* border: 1px 20px solid black; */
+  transition: 0.5s;
+  border-radius: 0.5rem;
+}
+
+q {
+  font-weight: 600;
+}
+
+/* ---------------------FOOTER STYLE---------------- */
+
+footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* -------------------MOBILE DISPLAY-------------------------- */
+
+@media screen and (max-width: 800px) {
+  .ggmutron .club-ggmutron {
+    margin: 0 auto;
+  }
+  .ggmutron p {
+    display: none;
+  }
+
+  aside > img {
+    display: block;
+    margin: 0 auto;
+    width: 200px;
+  }
+
+  main {
+    flex-direction: column;
+  }
+}
